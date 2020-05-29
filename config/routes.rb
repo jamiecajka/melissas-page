@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root 'users#new'
-  
+
   resources :users do
       resources :services
       resources :posts
@@ -9,12 +9,12 @@ Rails.application.routes.draw do
       resources :profiles
   end
 
-  resources :profiles do
-    resources :contacts
+  resources :profiles, except: [:show ] do
+    resources :contacts, only: [:index]
   end
 
-  resources :posts
-  resources :contacts
-  resources :services
+  resources :posts, except: [:show ]
+  resources :contacts, except: [:show ]
+  resources :services, except: [:show ]
 
 end
