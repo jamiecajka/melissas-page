@@ -10,6 +10,25 @@
   </head>
 
   <body>
+    <header>
+      <div class='top_menu'>
+        <div class="grid-container">
+            <p><%= link_to "Home", new_user_path, {class: 'header_links'} %></p>
+          </div>
+          <div class='grid-item'>
+            <p><%= link_to "About", profiles_path, {class: 'header_links'} %></p>
+          </div>
+          <div class='grid-item'>
+            <p><%= link_to "Services", services_path, {class: 'header_links'} %></p>
+          </div>
+          <div class='grid-item'>
+            <p><%= link_to "Blog", posts_path, {class: 'header_links'} %></p>
+          </div>
+          <div class='grid-item'>
+            <p><%= link_to "Contact", contacts_path, {class: 'header_links'} %></p>
+          </div>
+        </div>
+    </header>
     <%= yield %>
   </body>
 </html>
