@@ -1,4 +1,4 @@
-class profilesController < ApplicationController
+class ProfilesController < ApplicationController
 
   def index
     @profiles = Profile.all
