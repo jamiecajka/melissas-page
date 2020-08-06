@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
 
 body {
   background: #d9e6f2;
 }
+
+/* Home Page */
 
 .top_menu {
   background: #daf1e7;
@@ -26,4 +28,33 @@ body {
   width: 45%;
   padding-top: 30px;
   border-radius: 25%;
+}
+
+/* Services Page */
+
+.service_header {
+  text-align: center;
+  color: #7eceab;
+  font-family: 'Satisfy', cursive;
+  font-size: 25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  text-align: center;
+}
+
+.service_left {
+  text-align: left;
+  margin-left: 45%;
+  color: #31815f;
+  font-family: 'Raleway', sans-serif;
+}
+
+.service_right {
+  text-align: right;
+  margin-right: 45%;
+  color: #31815f;
+  font-family: 'Raleway', sans-serif;
 }
