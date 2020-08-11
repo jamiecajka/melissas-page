@@ -1,1 +1,7 @@
-<h1>Profiles</h1>
+<h1 class="about_header">Meet Melissa</h1>
+<div class="melissa_bio">
+  <%  @contacts.each do |c| %>
+    <img class="picture" <%= image_tag(c.picture.url) %>
+    <h3> <%= c.bio %></h3>
+  <% end %>
+</div>

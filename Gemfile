@@ -10,6 +10,7 @@ gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
 gem 'jbuilder', '~> 2.7'
 gem 'faker', github: 'stympy/faker'
+gem 'carrierwave'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

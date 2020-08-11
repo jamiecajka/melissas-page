@@ -56,7 +56,8 @@ class ContactsController < ApplicationController
       :instagram,
       :snapcht,
       :extra_one,
-      :extra_two
+      :extra_two,
+      :picture
     )
   end
 
