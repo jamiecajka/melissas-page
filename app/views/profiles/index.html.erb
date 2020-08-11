@@ -1,5 +1,7 @@
-<h1 class="about_header">Meet Melissa</h1>
-<div class="melissa_bio">
+<div class="page_header">
+  <h1>Meet Melissa</h1>
+</div>
+<div class="page_content">
   <%  @contacts.each do |c| %>
     <img class="picture" <%= image_tag(c.picture.url) %>
     <h3> <%= c.bio %></h3>

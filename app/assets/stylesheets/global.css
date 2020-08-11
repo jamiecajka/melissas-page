@@ -30,14 +30,23 @@ body {
   border-radius: 25%;
 }
 
-/* Services Page */
+/* Multi-Page */
 
-.service_header {
+
+.page_header {
   text-align: center;
   color: #7eceab;
   font-family: 'Satisfy', cursive;
   font-size: 25px;
 }
+
+.page_content{
+  text-align: center;
+  color: #31815f;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* Services Page */
 
 .grid-container {
   display: grid;
@@ -48,33 +57,30 @@ body {
 .service_left {
   text-align: left;
   margin-left: 45%;
-  color: #31815f;
-  font-family: 'Raleway', sans-serif;
 }
 
 .service_right {
   text-align: right;
   margin-right: 45%;
-  color: #31815f;
-  font-family: 'Raleway', sans-serif;
 }
 
 /* About Page */
 
-.about_header {
-  text-align: center;
-  color: #7eceab;
-  font-family: 'Satisfy', cursive;
-  font-size: 50px;
-}
-
-.melissa_bio {
-  text-align: center;
-  color: #31815f;
-  font-family: 'Raleway', sans-serif;
-  font-size: 20px;
-}
-
 .picture {
   border-radius: 25%
+}
+
+/* Blog Page */
+
+.post_nav {
+  text-decoration: none;
+}
+
+.blog_body {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.blog_post {
+  border: thick dotted #A61746;
 }

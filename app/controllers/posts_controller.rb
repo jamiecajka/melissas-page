@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -45,7 +45,8 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(
-      :body
+      :body,
+      :picture
     )
   end
 
