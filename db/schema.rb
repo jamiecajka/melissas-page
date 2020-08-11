@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_29_202047) do
+ActiveRecord::Schema.define(version: 2020_08_07_032928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_202047) do
     t.string "snapchat"
     t.string "extra_one"
     t.string "extra_two"
+    t.string "picture"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -44,6 +45,7 @@ ActiveRecord::Schema.define(version: 2020_05_29_202047) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
+    t.string "profile_photo"
   end
 
 end

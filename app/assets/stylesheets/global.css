@@ -58,3 +58,23 @@ body {
   color: #31815f;
   font-family: 'Raleway', sans-serif;
 }
+
+/* About Page */
+
+.about_header {
+  text-align: center;
+  color: #7eceab;
+  font-family: 'Satisfy', cursive;
+  font-size: 50px;
+}
+
+.melissa_bio {
+  text-align: center;
+  color: #31815f;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+.picture {
+  border-radius: 25%
+}

@@ -32,4 +32,5 @@ melissa.extra_one = 'm.me/blushestheticsstudione'
 melissa.instagram = 'instagram.com'
 melissa.snapchat = 'snapchat.com'
 melissa.bio = Faker::Movies::Ghostbusters.quote
-melissa.save!
+melissa.picture = Rails.root.join('db/images/melissa.jpg').open
+melissa.save
