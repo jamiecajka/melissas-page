@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'users#new'
-  
+
   devise_for :users
+
   resources :users do
       resources :services
       resources :posts
@@ -18,5 +19,6 @@ Rails.application.routes.draw do
   end
   resources :posts, except: [:show ]
   resources :services, except: [:show ]
+  resources :directions, only: [:edit]
 
 end

@@ -8,7 +8,7 @@ class DirectionsController < ApplicationController
     @direction = Direction.new(direction_params)
     if @direction.save
       flash[:notice] = "New direction Added!"
-      redirect_to user_path(current_user)
+      redirect_to contacts_path
     else
       flash[:alert] = "New direction Not Created"
       render :new
@@ -23,7 +23,7 @@ class DirectionsController < ApplicationController
    @direction = Direction.find(params[:id])
    if @direction.update_attributes(direction_params)
      flash[:notice] = "direction Updated!"
-     redirect_to user_path(current_user)
+     redirect_to contacts_path
    else
      render 'edit'
    end
@@ -33,7 +33,7 @@ class DirectionsController < ApplicationController
     @direction = Direction.find(params[:id])
     if @direction.destroy
       flash[:notice] = 'direction has been deleted.'
-      redirect_to user_path(current_user)
+      redirect_to contacts_path
     end
   end
 

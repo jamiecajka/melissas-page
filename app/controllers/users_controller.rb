@@ -18,7 +18,6 @@ class UsersController < ApplicationController
     params.require(:user).permit(
       :name,
       :email,
-      :profile_picture,
       :encrypted_password
     )
   end
