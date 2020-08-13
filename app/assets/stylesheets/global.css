@@ -140,3 +140,25 @@ body {
   display: none;
   overflow: hidden;
 }
+
+/* Edit Pages */
+
+.form_header {
+  font-size: 40px;
+}
+
+.text_field {
+  font-size: 15px;
+  height: 25px;
+}
+
+.form-actions {
+  padding-left: 25px;
+  color: inherit;
+}
+
+.text_area {
+  font-size: 15px;
+  height: 300px;
+  width: 500px;
+}

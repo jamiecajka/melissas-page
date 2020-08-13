@@ -12,7 +12,7 @@ class ServicesController < ApplicationController
     @service = Service.new(service_params)
     if @service.save
       flash[:notice] = "New Service Added!"
-      redirect_to user_path(current_user)
+      redirect_to services_path
     else
       flash[:alert] = "New Service Not Created"
       render :new
@@ -27,7 +27,7 @@ class ServicesController < ApplicationController
    @service = Service.find(params[:id])
    if @service.update_attributes(service_params)
      flash[:notice] = "Service Updated!"
-     redirect_to user_path(current_user)
+     redirect_to services_path
    else
      render 'edit'
    end
@@ -37,7 +37,7 @@ class ServicesController < ApplicationController
     @service = Service.find(params[:id])
     if @service.destroy
       flash[:notice] = 'Service has been deleted.'
-      redirect_to user_path(current_user)
+      redirect_to services_path
     end
   end
 

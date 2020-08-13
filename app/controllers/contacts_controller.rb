@@ -13,7 +13,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     if @contact.save
       flash[:notice] = "New Contact Added!"
-      redirect_to user_path(current_user)
+      redirect_to contacts_path
     else
       flash[:alert] = "New Contact Not Created"
       render :new
@@ -28,7 +28,7 @@ class ContactsController < ApplicationController
    @contact = Contact.find(params[:id])
    if @contact.update_attributes(contact_params)
      flash[:notice] = "Contact Updated!"
-     redirect_to user_path(current_user)
+     redirect_to contacts_path
    else
      render 'edit'
    end
@@ -38,7 +38,7 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
     if @contact.destroy
       flash[:notice] = 'Contact has been deleted.'
-      redirect_to user_path(current_user)
+      redirect_to contacts_path
     end
   end
 

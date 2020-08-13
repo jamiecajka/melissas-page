@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.paginate(page: params[:page], per_page: 5)
+    @posts = Post.all.order("created_at DESC").paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -12,7 +12,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     if @post.save
       flash[:notice] = "New Post Added!"
-      redirect_to user_path(current_user)
+      redirect_to posts_path
     else
       flash[:alert] = "New Post Not Created"
       render :new
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
    @post = Post.find(params[:id])
    if @post.update_attributes(post_params)
      flash[:notice] = "Post Updated!"
-     redirect_to user_path(current_user)
+     redirect_to posts_path
    else
      render 'edit'
    end
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.destroy
       flash[:notice] = 'Post has been deleted.'
-      redirect_to user_path(current_user)
+      redirect_to user_path(posts_path)
     end
   end
 

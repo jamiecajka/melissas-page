@@ -4,8 +4,11 @@
 <div class="page_content">
   <div class="grid-container">
     <%  @services.each do |s| %>
+      <% if user_signed_in? %>
+        <%= link_to "Edit", edit_service_path(s.id)  %>
+      <% end %>
       <h3 class="service_left"> <%= s.name %></h3>
       <h3 class="service_right"> <%= s.price %></h3>
-      <!-- <h3> <%= s.description %></h3> -->
     <% end %>
+  </div>
 </div>

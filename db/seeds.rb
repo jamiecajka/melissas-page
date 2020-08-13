@@ -57,5 +57,5 @@ second.save
 user1 = User.new
 user1.name = 'Melissa'
 user1.email = 'melissaann4883@yahoo.com'
-user1.encrypted_password = 'password'
+user1.password = 'password'
 user1.save!

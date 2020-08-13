@@ -4,6 +4,9 @@
 <div class="page_content">
   <%  @posts.each do |p| %>
     <div class="blog_post">
+      <% if user_signed_in? %>
+        <%= link_to "Edit", edit_post_path(p.id)  %>
+      <% end %>
       <h2> <%= p.created_at.strftime("%B %d, %Y")  %></h2>
       <img class="picture" <%= image_tag(p.picture.url) %>
       <div class="blog_body">

@@ -6,6 +6,9 @@
     <%= image_tag 'map.png', {class: 'map-pic'} %>
   </div>
   <% @contacts.each do |c| %>
+    <% if user_signed_in? %>
+      <%= link_to "Edit", edit_contact_path(c.id)  %>
+    <% end %>
     <h3><%= c.address %>, <%= c.city %> <%= c.zip %> </h3>
     <h3>Phone: <%= c.phone %></h3>
     <h3>Email: <%= c.email %></h3>
@@ -17,6 +20,9 @@
   <h2>Driving Directions</h2>
   <% @directions.each do |d| %>
     <button class="accordion"><%= d.starting_location %></button>
+    <% if user_signed_in? %>
+      <%= link_to "Edit", edit_direction_path(d.id)  %>
+    <% end %>
     <div class="panel">
       <p><%= d.step_one %></p>
       <p><%= d.step_two %></p>
