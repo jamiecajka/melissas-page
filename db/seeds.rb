@@ -53,3 +53,9 @@ second.step_four = 'Turn left onto Calvert St'
 second.step_five = 'Turn right onto Loveland Dr'
 second.step_six = 'Turn left at Fiene Cir'
 second.save
+
+user1 = User.new
+user1.name = 'Melissa'
+user1.email = 'melissaann4883@yahoo.com'
+user1.encrypted_password = 'password'
+user1.save!
