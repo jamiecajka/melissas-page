@@ -1,1 +1,51 @@
-<h1>Contacts</h1>
+<div class="page_header">
+  <h1>Contact</h1>
+</div>
+<div class="page_content">
+  <div class="map">
+    <%= image_tag 'map.png', {class: 'map-pic'} %>
+  </div>
+  <% @contacts.each do |c| %>
+    <h3><%= c.address %>, <%= c.city %> <%= c.zip %> </h3>
+    <h3>Phone: <%= c.phone %></h3>
+    <h3>Email: <%= c.email %></h3>
+    <%= link_to c.facebook do %>
+      <i class="fab fa-facebook fa-3x"></i>
+    <% end %>
+  <% end %>
+  <br>
+  <h2>Driving Directions</h2>
+  <% @directions.each do |d| %>
+    <button class="accordion"><%= d.starting_location %></button>
+    <div class="panel">
+      <p><%= d.step_one %></p>
+      <p><%= d.step_two %></p>
+      <p><%= d.step_three %></p>
+      <p><%= d.step_four %></p>
+      <p><%= d.step_five %></p>
+      <p><%= d.step_six %></p>
+    </div>
+  <% end %>
+</div>
+
+
+  <script type="text/javascript">
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>

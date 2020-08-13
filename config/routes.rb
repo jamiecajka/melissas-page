@@ -13,8 +13,10 @@ Rails.application.routes.draw do
     resources :contacts, only: [:index]
   end
 
+  resources :contacts, except: [:show ] do
+    resources :directions, only: [:index, :edit, :delete]
+  end
   resources :posts, except: [:show ]
-  resources :contacts, except: [:show ]
   resources :services, except: [:show ]
 
 end

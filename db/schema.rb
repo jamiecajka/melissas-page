@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_11_171751) do
+ActiveRecord::Schema.define(version: 2020_08_12_175323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,16 @@ ActiveRecord::Schema.define(version: 2020_08_11_171751) do
     t.string "extra_one"
     t.string "extra_two"
     t.string "picture"
+  end
+
+  create_table "directions", force: :cascade do |t|
+    t.string "starting_location"
+    t.string "step_one"
+    t.string "step_two"
+    t.string "step_three"
+    t.string "step_four"
+    t.string "step_five"
+    t.string "step_six"
   end
 
   create_table "posts", force: :cascade do |t|
