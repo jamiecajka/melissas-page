@@ -4,7 +4,9 @@
 <div class="page_content">
   <%  @contacts.each do |c| %>
   <% if user_signed_in? %>
-    <%= link_to "Edit", edit_contact_path(c.id)  %>
+    <%= link_to edit_contact_path(c.id) do %>
+      <i class="far fa-edit fa-2x"></i>
+    <% end %>
   <% end %>
     <img class="picture" <%= image_tag(c.picture.url) %>
     <h3> <%= c.bio %></h3>

@@ -1,28 +1,30 @@
-<%= form_for @post do |f| %>
-  <% if @post.errors.any? %>
-    <div>
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this info from being saved:</h2>
-      <ul>
-        <% @post.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
+<div class="page_content">
+  <%= form_for @post do |f| %>
+    <% if @post.errors.any? %>
+      <div>
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this info from being saved:</h2>
+        <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class='page_content'>
+      <div class="row">
+        <h1 class="form_header">Update Post</h1>
+      </div>
+      <div class="row">
+        <%= f.label :picture, 'Picture', class: 'form-actions' %>
+        <%= f.file_field :picture, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= f.label :body, 'Body', class: 'form-actions' %>
+        <%= f.text_area :body, class: 'text_area' %>
+      </div>
+      <div class="form-actions">
+        <%= f.button 'Update' %>
+      </div>
     </div>
   <% end %>
-  <div class='page_content'>
-    <div class="row">
-      <h1 class="form_header">Update Post</h1>
-    </div>
-    <div class="row">
-      <%= f.label :picture, 'Picture', class: 'form-actions' %>
-      <%= f.file_field :picture, class: 'text_field' %>
-    </div>
-    <div class="row">
-      <%= f.label :body, 'Body', class: 'form-actions' %>
-      <%= f.text_area :body, class: 'text_area' %>
-    </div>
-    <div class="form-actions">
-      <%= f.button 'Update' %>
-    </div>
-  </div>
-<% end %>
+</div>
