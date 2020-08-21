@@ -7,7 +7,9 @@
   </div>
   <% @contacts.each do |c| %>
     <% if user_signed_in? %>
-      <%= link_to "Edit", edit_contact_path(c.id)  %>
+      <%= link_to edit_contact_path(c.id) do %>
+        <i class="far fa-edit fa-2x"></i>
+      <% end %>
     <% end %>
     <h3><%= c.address %>, <%= c.city %> <%= c.zip %> </h3>
     <h3>Phone: <%= c.phone %></h3>
@@ -21,7 +23,12 @@
   <% @directions.each do |d| %>
     <button class="accordion"><%= d.starting_location %></button>
     <% if user_signed_in? %>
-      <%= link_to "Edit", edit_direction_path(d.id)  %>
+      <%= link_to edit_direction_path(d.id) do  %>
+        <i class="far fa-edit fa-2x"></i>
+      <% end %>
+      <%= link_to contacts_path, data: { confirm: "Are you sure?" }, method: :delete do %>
+        <i class="far fa-trash-alt fa-2x"></i>
+      <% end %>
     <% end %>
     <div class="panel">
       <p><%= d.step_one %></p>

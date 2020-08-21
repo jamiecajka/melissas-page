@@ -1,56 +1,58 @@
-<%= form_for @contact do |f| %>
-  <% if @contact.errors.any? %>
-    <div>
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this info from being saved:</h2>
-      <ul>
-        <% @contact.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class='page_content'>
-    <div class="row">
-      <h1 class="form_header">Update Contact Info</h1>
-    </div>
-    <div class="row">
-      <%= f.label :address, 'Address', class: 'form-actions' %>
-      <%= f.text_field :address, class: 'text_field' %>
-    </div>
-    <div class="row">
-      <%= f.label :city, 'City/State', class: 'form-actions' %>
-      <%= f.text_field :city, class: 'text_field' %>
-    </div>
-    <div class="row">
-      <%= f.label :zip, 'Zip', class: 'form-actions' %>
-      <%= f.text_field :zip, class: 'text_field' %>
-    </div>
-    <div class="row">
-      <%= f.label :phone, 'Phone', class: 'form-actions' %>
-      <%= f.text_field :phone, class: 'text_field' %>
-    </div>
-    <div class="row">
-      <%= f.label :email, 'Email', class: 'form-actions' %>
-      <%= f.text_field :email, class: 'text_field' %>
-    </div>
-    <div class="row">
-      <%= f.label :facebook, 'Facebook', class: 'form-actions' %>
-      <%= f.text_field :city, class: 'text_field' %>
-    </div>
+<div class="page_content">
+  <%= form_for @contact do |f| %>
+    <% if @contact.errors.any? %>
+      <div>
+        <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this info from being saved:</h2>
+        <ul>
+          <% @contact.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <div class='page_content'>
       <div class="row">
-        <h1 class="form_header">Update Profile</h1>
+        <h1 class="form_header">Update Contact Info</h1>
       </div>
       <div class="row">
-        <%= f.label :picture, 'Picture', class: 'form-actions' %>
-        <%= f.file_field :picture %>
+        <%= f.label :address, 'Address', class: 'form-actions' %>
+        <%= f.text_field :address, class: 'text_field' %>
       </div>
       <div class="row">
-        <%= f.label :bio, 'Bio', class: 'form-actions' %>
-        <%= f.text_area :bio, class: 'text_area' %>
+        <%= f.label :city, 'City/State', class: 'form-actions' %>
+        <%= f.text_field :city, class: 'text_field' %>
       </div>
-    <div class="form-actions">
-      <%= f.button 'Update' %>
+      <div class="row">
+        <%= f.label :zip, 'Zip', class: 'form-actions' %>
+        <%= f.text_field :zip, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= f.label :phone, 'Phone', class: 'form-actions' %>
+        <%= f.text_field :phone, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= f.label :email, 'Email', class: 'form-actions' %>
+        <%= f.text_field :email, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= f.label :facebook, 'Facebook', class: 'form-actions' %>
+        <%= f.text_field :city, class: 'text_field' %>
+      </div>
+      <div class='page_content'>
+        <div class="row">
+          <h1 class="form_header">Update Profile</h1>
+        </div>
+        <div class="row">
+          <%= f.label :picture, 'Picture', class: 'form-actions' %>
+          <%= f.file_field :picture %>
+        </div>
+        <div class="row">
+          <%= f.label :bio, 'Bio', class: 'form-actions' %>
+          <%= f.text_area :bio, class: 'text_area' %>
+        </div>
+      <div class="form-actions">
+        <%= f.button 'Update' %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

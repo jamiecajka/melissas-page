@@ -2,10 +2,18 @@
   <h1>Melissa's Blog</h1>
 </div>
 <div class="page_content">
+  <% if user_signed_in? %>
+    <h2><%= link_to 'Add New Post', new_post_path %></h2>
+  <% end %>
   <%  @posts.each do |p| %>
     <div class="blog_post">
       <% if user_signed_in? %>
-        <%= link_to "Edit", edit_post_path(p.id)  %>
+        <%= link_to edit_post_path(p.id) do  %>
+          <i class="far fa-edit fa-2x"></i>
+        <% end %>
+        <%= link_to post_path(p.id), data: { confirm: "Are you sure?" }, method: :delete do %>
+          <i class="far fa-trash-alt fa-2x"></i>
+        <% end %>
       <% end %>
       <h2> <%= p.created_at.strftime("%B %d, %Y")  %></h2>
       <img class="picture" <%= image_tag(p.picture.url) %>
