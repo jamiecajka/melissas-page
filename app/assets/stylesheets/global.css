@@ -2,6 +2,8 @@
 
 body {
   background: #d9e6f2;
+  background-image: url("lace.jpg");
+  background-blend-mode: color-burn;
 }
 
 /* Home Page */
