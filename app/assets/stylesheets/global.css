@@ -1,49 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
 
 body {
-  background: #d9e6f2;
-  background-image: url("lace.jpg");
-  background-blend-mode: color-burn;
+  background: #E5E5E5;
+  background-image: url("download.jpeg");
+  background-blend-mode:overlay;
 }
 
 /* Home Page */
 
 .top_menu {
-  background: #daf1e7;
+  background: #B7C0C3;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   text-align: center;
-  height: 65px;
+  height: 5%;
+  width: 100vw;
+  border-radius: 5px;
 }
 
 .header_links {
   text-decoration: none;
-  color: #4073A2;
+  color: #F7EE79;
   font-size: 25px;
   font-family: 'Satisfy', cursive;
 }
 
 .logo-pic {
   display: block;
+  margin-top: 5%;
   margin-left: auto;
   margin-right: auto;
   width: 45%;
-  padding-top: 30px;
   border-radius: 25%;
+  border: 1px solid #E5E5E5;
 }
 
 /* Multi-Page */
 
 .page_header {
   text-align: center;
-  color: #7eceab;
+  color: #3E434E;
   font-family: 'Satisfy', cursive;
   font-size: 25px;
 }
 
 .page_content{
   text-align: center;
-  color: #31815f;
+  color: #767F79;
   font-family: 'Raleway', sans-serif;
 }
 
@@ -83,7 +86,13 @@ body {
 }
 
 .blog_post {
-  border: thick dotted #A61746;
+  border-radius: 8px;
+  border-bottom: 20px solid transparent;
+  border-image: url("hexagon-border.png") 65 round;
+  border-image-outset: 0;
+  margin-left: 15%;
+  margin-right: 15%;
+  border-radius: 25%;
 }
 
 .apple_pagination {
@@ -118,6 +127,7 @@ body {
 .map-pic {
   width: 45%;
   border-radius: 15%;
+  border: 1px solid #E5E5E5;
 }
 
 .accordion {
