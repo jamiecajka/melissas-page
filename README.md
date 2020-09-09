@@ -9,7 +9,7 @@ This is still a work in progress. Once the project has been completed to Melissa
 standards, the site will be deployed and a link to the site will be added to this
 repository.
 
-# To Be Finished
+## To Be Finished
 
 -styling (the colors and fonts currently in use are demo colors)
 -correct data to be entered
