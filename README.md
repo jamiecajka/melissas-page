@@ -9,6 +9,8 @@ This is still a work in progress. Once the project has been completed to Melissa
 standards, the site will be deployed and a link to the site will be added to this
 repository.
 
+Link to the demo site: https://ancient-fortress-25656.herokuapp.com/
+
 ## To Be Finished
 
 -styling (the colors and fonts currently in use are demo colors)

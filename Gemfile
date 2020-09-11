@@ -15,6 +15,8 @@ gem 'will_paginate'
 gem 'devise'
 gem 'simple_form'
 gem 'mini_magick'
+gem "aws-sdk-s3", require: false
+gem 'fog-aws'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 
