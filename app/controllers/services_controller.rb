@@ -47,7 +47,9 @@ class ServicesController < ApplicationController
     params.require(:service).permit(
       :name,
       :price,
-      :description
+      :description,
+      :time,
+      :catagory
     )
   end
 
