@@ -22,6 +22,17 @@
         <%= f.label :price, 'Price', class: 'form-actions' %>
         <%= f.text_field :price, class: 'text_field' %>
       </div>
+      <div class="row">
+        <%= f.label :time, 'Time', class: 'form-actions' %>
+        <%= f.text_field :time, class: 'text_field' %>
+      </div>
+      <div class="row">
+        <%= f.label :description, 'Description', class: 'form-actions' %>
+        <%= f.text_area :description, class: 'text_area' %>
+      </div>
+        <%= f.label :catagory, 'Catagory', class: 'form-actions' %>
+        <%= f.select :catagory, options_for_select([['Facial', 'facial'], ['Waxing', 'waxing'], ['Makeup', 'makeup'], ['Miscellaneous', 'misc']]) %>
+      </div>
       <div class="form-actions">
         <%= f.button 'Update' %>
       </div>

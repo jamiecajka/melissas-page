@@ -184,3 +184,7 @@ body {
   height: 300px;
   width: 500px;
 }
+
+.row {
+  margin-bottom: 10px;
+}
