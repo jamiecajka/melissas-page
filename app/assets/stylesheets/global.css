@@ -105,6 +105,11 @@ body {
   border-radius: 25%;
 }
 
+.blog_picture {
+  max-height: 300px;
+  max-width: 300px;
+}
+
 .apple_pagination {
   border: 1px solid #e5e5e5;
   text-align: center;
