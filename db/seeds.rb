@@ -6,12 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-10.times do
-  Post.create(
-    body: Faker::Hipster.paragraph
-  )
-end
-
 melissa = Contact.new
 melissa.name = 'Melissa Stone'
 melissa.address = '3601 Calvert St #26'
@@ -28,7 +22,7 @@ melissa.picture = Rails.root.join('db/images/melissa.jpg').open
 melissa.save
 
 first = Direction.new
-first.starting_location = '48th and Pioneers Street'
+first.starting_location = 'Starting at 48th and Pioneers Street'
 first.step_one = 'Head west on Pioneers Blvd toward S 47th St'
 first.step_two = 'Turn right onto S 40th St'
 first.step_three = 'Turn left onto Calvert St'
@@ -37,7 +31,7 @@ first.step_five = 'Turn left at Fiene Cir'
 first.save
 
 second = Direction.new
-second.starting_location = '27th & O Street'
+second.starting_location = 'Starting at 27th & O Street'
 second.step_one = 'Head west on S 27th St toward N 27th St'
 second.step_two = 'Turn left onto Sheridan Blvd'
 second.step_three = 'At the traffic circle, take the 1st exit onto S 33rd St'
@@ -195,3 +189,19 @@ service18.price = 'Starts at $40'
 service18.time = 'Duration Varies'
 service18.catagory = 'waxing'
 service18.save!
+
+post1 = Post.new
+post1.body = 'Mystery grab bags!!!! Choose from $10, $20, $30!!! Lots of cute little gifts....skincare, jewelry and more!!! While supplies last!'
+post1.save!
+
+post2 = Post.new
+post2.body = 'Decorating the shop for Halloween!!!!'
+post2.save!
+
+post3 = Post.new
+post3.body = 'That glow tho!!!! 😍 Love seeing what comes off with a dermaplane facial!'
+post3.save!
+
+post4 = Post.new
+post4.body = 'I couldn’t wait to post these facial specials!!! Both are great for all skin types! I went with a more gentle pumpkin enzyme so it can be catered to all skin types. Both are hydrating and provide a great exfoliation and the heavenly smelling arabica coffee bean mask is full of antioxidants and vitamin E to fight free radical damage. Book now!!!'
+post4.save!

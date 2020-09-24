@@ -16,7 +16,7 @@
         <% end %>
       <% end %>
       <h2> <%= p.created_at.strftime("%B %d, %Y")  %></h2>
-      <img class="picture" <%= image_tag(p.picture.url) %>
+      <img class="blog_picture" <%= image_tag(p.picture.url) %>
       <div class="blog_body">
         <h3> <%= p.body %></h3>
       </div>
