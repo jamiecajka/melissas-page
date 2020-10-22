@@ -17,8 +17,10 @@ melissa.facebook = 'https://www.facebook.com/blushestheticsstudione/'
 melissa.extra_one = 'm.me/blushestheticsstudione'
 melissa.instagram = 'instagram.com'
 melissa.snapchat = 'snapchat.com'
-melissa.bio = Faker::Movies::Ghostbusters.quote
 melissa.picture = Rails.root.join('db/images/melissa.jpg').open
+melissa.bio = 'Hi! My name is Melissa Stone, owner of Blush Esthetics Studio in Lincoln, Ne. After spending 6 years in the beauty industry, I attended the Esthetics program at the College of Hair Design, and opened Blush in 2016. Whether it be for relaxation or addressing skin care concerns, I want every client leaving feeling pampered, glowing, and confident about themselves.
+My passions are skincare and waxing, as well as educating clients about skincare and offering tailored home care. I love to continue my education through classes and esthetics and makeup shows. I am also certified in dermaplaning, full body waxing, microdermabrasion, and chemical peels.
+At home, I am a fur mama to Athena and Loki, and wife to Tyler. I love everything spooky, especially Halloween. I love movies, reading, and home decorating.'
 melissa.save
 
 first = Direction.new
@@ -43,7 +45,7 @@ second.save
 user1 = User.new
 user1.name = 'Melissa'
 user1.email = 'melissaann4883@yahoo.com'
-user1.password = 'password'
+user1.password = 'Hooray11!'
 user1.save!
 
 service1 = Service.new
@@ -205,3 +207,15 @@ post3.save!
 post4 = Post.new
 post4.body = 'I couldn’t wait to post these facial specials!!! Both are great for all skin types! I went with a more gentle pumpkin enzyme so it can be catered to all skin types. Both are hydrating and provide a great exfoliation and the heavenly smelling arabica coffee bean mask is full of antioxidants and vitamin E to fight free radical damage. Book now!!!'
 post4.save!
+
+post5 = Post.new
+post5.body = 'Happy October!!!! Check for the fall facial specials! Times are limited so please book now!!!'
+post5.save!
+
+post6 = Post.new
+post6.body = 'Tinting is one of my favorite services to do! You can really customize the look of brows if u want minimal or dramatic! Love how these turned out!'
+post6.save!
+
+post7 = Post.new
+post7.body = 'Making room for new!!!! Tons of jewelry, hats, body scrubs, foot peels, and more!'
+post7.save!
