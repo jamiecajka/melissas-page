@@ -1,11 +1,7 @@
 class ProfilePhotoUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  if Rails.env.production?
-    storage :fog
-  else
-    storage :file
-  end
+  storage :file
 
   def extension_whitelist
     %w(jpg jpeg gif png)
