@@ -2,7 +2,7 @@
 
 body {
   background: #E5E5E5;
-  background-image: url("download.jpeg");
+  background-image: url("static-pictures/download.jpeg");
   background-blend-mode:overlay;
 }
 
@@ -98,7 +98,7 @@ body {
 .blog_post {
   border-radius: 8px;
   border-bottom: 20px solid transparent;
-  border-image: url("hexagon-border.png") 65 round;
+  border-image: url("static-pictures/hexagon-border.png") 65 round;
   border-image-outset: 0;
   margin-left: 15%;
   margin-right: 15%;
