@@ -15,7 +15,7 @@ body {
 }
 
 .top_menu {
-  background: #B7C0C3;
+  background: #C7D4C7;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   text-align: center;
@@ -26,9 +26,10 @@ body {
 
 .header_links {
   text-decoration: none;
-  color: #F7EE79;
-  font-size: 25px;
+  color: #363A3E;
+  font-size: 35px;
   font-family: 'Satisfy', cursive;
+  font-weight: bold;
 }
 
 .logo-pic {
@@ -87,7 +88,8 @@ body {
 /* About Page */
 
 .picture {
-  border-radius: 25%
+  border-radius: 25%;
+  height: 300px;
 }
 
 /* Blog Page */
