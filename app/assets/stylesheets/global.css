@@ -8,6 +8,11 @@ body {
 
 /* Home Page */
 
+.front_page {
+  height: auto;
+  width: auto;
+}
+
 .top_menu {
   background: #B7C0C3;
   display: grid;
