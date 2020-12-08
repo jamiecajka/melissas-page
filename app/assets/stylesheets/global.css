@@ -2,8 +2,9 @@
 
 body {
   background: #E5E5E5;
-  background-image: url("static-pictures/download.jpeg");
-  background-blend-mode:overlay;
+/*  background-image: url("static-pictures/download.jpeg");
+  background-blend-mode:overlay; */
+  background: #F7F7F7
 }
 
 /* Home Page */
