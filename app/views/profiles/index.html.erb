@@ -2,13 +2,13 @@
   <h1>Meet Melissa</h1>
 </div>
 <div class="page_content">
+  <img class="picture" <%= image_tag('static-pictures/melissa.jpg') %>
   <%  @contacts.each do |c| %>
   <% if user_signed_in? %>
     <%= link_to edit_contact_path(c.id) do %>
       <i class="far fa-edit fa-2x"></i>
     <% end %>
   <% end %>
-    <img class="picture" <%= image_tag(c.picture.url) %>
     <h3> <%= c.bio %></h3>
   <% end %>
 </div>
