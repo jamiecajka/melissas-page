@@ -15,6 +15,8 @@ gem 'will_paginate'
 gem 'devise'
 gem 'simple_form'
 gem 'mini_magick'
+gem "figaro"
+gem 'fog-aws'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

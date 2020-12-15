@@ -1,7 +1,7 @@
 class ProfilePhotoUploader < CarrierWave::Uploader::Base
   include CarrierWave::MiniMagick
 
-  storage :file
+  storage :fog
 
   def extension_whitelist
     %w(jpg jpeg gif png)
