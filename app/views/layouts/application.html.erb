@@ -5,31 +5,33 @@
     <title>Blush Esthetics Studio</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <%= stylesheet_link_tag 'custom', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_pack_tag 'application' %>
     <script src="https://kit.fontawesome.com/fe581ab890.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header>
-      <div class='top_menu'>
-        <div class="grid-container">
-            <p><%= link_to "Home", new_user_path, {class: 'header_links'} %></p>
-          </div>
-          <div class='grid-item'>
-            <p><%= link_to "About", profiles_path, {class: 'header_links'} %></p>
-          </div>
-          <div class='grid-item'>
-            <p><%= link_to "Services", services_path, {class: 'header_links'} %></p>
-          </div>
-          <div class='grid-item'>
-            <p><%= link_to "Blog", posts_path, {class: 'header_links'} %></p>
-          </div>
-          <div class='grid-item'>
-            <p><%= link_to "Contact", contacts_path, {class: 'header_links'} %></p>
+      <nav class="navbar has-background-warning" role="navigation" aria-label="main navigation">
+        <div class="navbar-item center">
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu has-text-centered">
+          <div class="navbar-start is-size-4 is-family-secondary is-size-7-mobile">
+              <%= link_to "Home", new_user_path, :class=>"navbar-item" %>
+              <%= link_to "About", profiles_path, :class=>"navbar-item" %>
+              <%= link_to "Services", services_path, :class=>"navbar-item" %>
+              <%= link_to "Blog", posts_path, :class=>"navbar-item" %>
+              <%= link_to "Contact", contacts_path, :class=>"navbar-item" %>
           </div>
         </div>
+      </nav>
     </header>
     <%= yield %>
     <footer>
@@ -45,3 +47,31 @@
     </footer>
   </body>
 </html>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>

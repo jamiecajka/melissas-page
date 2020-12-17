@@ -2,96 +2,100 @@
   <% if user_signed_in? %>
     <h2><%= link_to 'Add New Service', new_service_path %></h2>
   <% end %>
-    <div class="page_header">
-      <h1>Facials</h1>
-    </div>
-    <%  @services.each do |f| %>
-      <% if f.catagory == 'facial' %>
-        <% if user_signed_in? %>
-          <%= link_to edit_service_path(f.id) do  %>
-            <i class="far fa-edit fa-2x"></i>
-          <% end %>
-          <%= link_to service_path(f.id), data: { confirm: "Are you sure?" }, method: :delete do %>
-            <i class="far fa-trash-alt fa-2x"></i>
-          <% end %>
-        <% end %>
-        <div class="service_name">
-          <h3><%= f.name %></h3>
-        </div>
-        <div class="grid-container">
-          <h3 class="service_left"><%= f.price %></h3>
-          <h3 class="service_right"><%= f.time %></h3>
-        </div>
-        <h3 class="service_desc"><%= f.description %></h3>
-      <% end %>
-    <% end %>
-    <div class="page_header">
-      <h1>Waxing</h1>
-    </div>
-    <%  @services.each do |w| %>
-      <% if w.catagory == 'waxing' %>
-        <% if user_signed_in? %>
-          <%= link_to edit_service_path(w.id) do  %>
-            <i class="far fa-edit fa-2x"></i>
-          <% end %>
-          <%= link_to service_path(w.id), data: { confirm: "Are you sure?" }, method: :delete do %>
-            <i class="far fa-trash-alt fa-2x"></i>
-          <% end %>
-        <% end %>
-        <div class="service_name">
-          <h3><%= w.name %></h3>
-        </div>
-        <div class="grid-container">
-          <h3 class="service_left"><%= w.price %></h3>
-          <h3 class="service_right"><%= w.time %></h3>
-        </div>
-        <h3 class="service_desc"><%= w.description %></h3>
-      <% end %>
-    <% end %>
-    <div class="page_header">
-      <h1>Makeup</h1>
-    </div>
-    <%  @services.each do |m| %>
-      <% if m.catagory == 'makeup' %>
-        <% if user_signed_in? %>
-          <%= link_to edit_service_path(m.id) do  %>
-            <i class="far fa-edit fa-2x"></i>
-          <% end %>
-          <%= link_to service_path(m.id), data: { confirm: "Are you sure?" }, method: :delete do %>
-            <i class="far fa-trash-alt fa-2x"></i>
-          <% end %>
-        <% end %>
-        <div class="service_name">
-          <h3><%= m.name %></h3>
-        </div>
-        <div class="grid-container">
-          <h3 class="service_left"><%= m.price %></h3>
-          <h3 class="service_right"><%= m.time %></h3>
-        </div>
-        <h3 class="service_desc"><%= m.description %></h3>
-      <% end %>
-    <% end %>
-    <div class="page_header">
-      <h1>Miscellaneous</h1>
-    </div>
-    <%  @services.each do |s| %>
-      <% if s.catagory == 'misc' %>
-        <% if user_signed_in? %>
-          <%= link_to edit_service_path(s.id) do  %>
-            <i class="far fa-edit fa-2x"></i>
-          <% end %>
-          <%= link_to service_path(s.id), data: { confirm: "Are you sure?" }, method: :delete do %>
-            <i class="far fa-trash-alt fa-2x"></i>
-          <% end %>
-        <% end %>
-        <div class="service_name">
-          <h3><%= s.name %></h3>
-        </div>
-        <div class="grid-container">
-          <h3 class="service_left"><%= s.price %></h3>
-          <h3 class="service_right"><%= s.time %></h3>
-        </div>
-        <h3 class="service_desc"><%= s.description %></h3>
-      <% end %>
-    <% end %>
+  <br>
+  <div class="page_header">
+    <h1>Facials</h1>
   </div>
+  <%  @services.each do |f| %>
+    <% if f.catagory == 'facial' %>
+      <% if user_signed_in? %>
+        <%= link_to edit_service_path(f.id) do  %>
+          <i class="far fa-edit fa-2x"></i>
+        <% end %>
+        <%= link_to service_path(f.id), data: { confirm: "Are you sure?" }, method: :delete do %>
+          <i class="far fa-trash-alt fa-2x"></i>
+        <% end %>
+      <% end %>
+      <div class="service_name">
+        <h3><%= f.name %></h3>
+      </div>
+      <div class="grid-container">
+        <h3 class="service_left"><%= f.price %></h3>
+        <h3 class="service_right"><%= f.time %></h3>
+      </div>
+      <h3 class="service_desc"><%= f.description %></h3>
+    <% end %>
+  <% end %>
+  <br>
+  <div class="page_header">
+    <h1>Waxing</h1>
+  </div>
+  <%  @services.each do |w| %>
+    <% if w.catagory == 'waxing' %>
+      <% if user_signed_in? %>
+        <%= link_to edit_service_path(w.id) do  %>
+          <i class="far fa-edit fa-2x"></i>
+        <% end %>
+        <%= link_to service_path(w.id), data: { confirm: "Are you sure?" }, method: :delete do %>
+          <i class="far fa-trash-alt fa-2x"></i>
+        <% end %>
+      <% end %>
+      <div class="service_name">
+        <h3><%= w.name %></h3>
+      </div>
+      <div class="grid-container">
+        <h3 class="service_left"><%= w.price %></h3>
+        <h3 class="service_right"><%= w.time %></h3>
+      </div>
+      <h3 class="service_desc"><%= w.description %></h3>
+    <% end %>
+  <% end %>
+  <br>
+  <div class="page_header">
+    <h1>Makeup</h1>
+  </div>
+  <%  @services.each do |m| %>
+    <% if m.catagory == 'makeup' %>
+      <% if user_signed_in? %>
+        <%= link_to edit_service_path(m.id) do  %>
+          <i class="far fa-edit fa-2x"></i>
+        <% end %>
+        <%= link_to service_path(m.id), data: { confirm: "Are you sure?" }, method: :delete do %>
+          <i class="far fa-trash-alt fa-2x"></i>
+        <% end %>
+      <% end %>
+      <div class="service_name">
+        <h3><%= m.name %></h3>
+      </div>
+      <div class="grid-container">
+        <h3 class="service_left"><%= m.price %></h3>
+        <h3 class="service_right"><%= m.time %></h3>
+      </div>
+      <h3 class="service_desc"><%= m.description %></h3>
+    <% end %>
+  <% end %>
+  <br>
+  <div class="page_header">
+    <h1>Miscellaneous</h1>
+  </div>
+  <%  @services.each do |s| %>
+    <% if s.catagory == 'misc' %>
+      <% if user_signed_in? %>
+        <%= link_to edit_service_path(s.id) do  %>
+          <i class="far fa-edit fa-2x"></i>
+        <% end %>
+        <%= link_to service_path(s.id), data: { confirm: "Are you sure?" }, method: :delete do %>
+          <i class="far fa-trash-alt fa-2x"></i>
+        <% end %>
+      <% end %>
+      <div class="service_name">
+        <h3><%= s.name %></h3>
+      </div>
+      <div class="grid-container">
+        <h3 class="service_left"><%= s.price %></h3>
+        <h3 class="service_right"><%= s.time %></h3>
+      </div>
+      <h3 class="service_desc"><%= s.description %></h3>
+    <% end %>
+  <% end %>
+</div>
