@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
+
+$scheme-main:#F7F7F7;
+$navbar-item-color:#363A3E;
+$family-secondary: 'Satisfy', cursive;
+$warning: #C7D4C7;
+$body-family:'Raleway', sans-serif;
+
+.navbar-item.center {
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@import "bulma";

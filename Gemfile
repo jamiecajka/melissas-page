@@ -17,6 +17,7 @@ gem 'simple_form'
 gem 'mini_magick'
 gem "figaro"
 gem 'fog-aws'
+gem "bulma-rails", "~> 0.9.1"
 
 gem 'bootsnap', '>= 1.4.2', require: false
 

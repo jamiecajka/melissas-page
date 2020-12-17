@@ -1,14 +1,24 @@
+<br>
 <div class="page_header">
-  <h1>Meet Melissa</h1>
+  <h1 class="title is-1 is-family-secondary">Meet Melissa</h1>
 </div>
-<div class="page_content">
-  <img class="picture" <%= image_tag('static-pictures/melissa.jpg') %>
-  <%  @contacts.each do |c| %>
-  <% if user_signed_in? %>
-    <%= link_to edit_contact_path(c.id) do %>
-      <i class="far fa-edit fa-2x"></i>
-    <% end %>
-  <% end %>
-    <h3> <%= c.bio %></h3>
-  <% end %>
-</div>
+<br>
+<%  @contacts.each do |c| %>
+  <div class="card">
+    <div class="card-image">
+        <%= image_tag 'static-pictures/melissa.jpg', {class: 'picture'} %>
+    </div>
+    <div class="card-content">
+      <div class="content">
+        <h3> <%= simple_format  c.bio %></h3>
+      </div>
+      <% if user_signed_in? %>
+        <footer class="card-footer">
+          <%= link_to edit_contact_path(c.id) do %>
+            <i class="far fa-edit fa-2x"></i>
+          <% end %>
+        </footer>
+      <% end %>
+    </div>
+  </div>
+<% end %>
