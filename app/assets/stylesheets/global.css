@@ -8,6 +8,13 @@ body {
 
 .center_pic {
   margin-left: 33%;
+  margin-bottom: 25px;
+  max-width: 250px;
+  max-height: 250px;
+}
+
+.center_video {
+  margin: 5px 25%;
 }
 
 .top_menu {

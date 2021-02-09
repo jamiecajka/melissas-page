@@ -46,7 +46,9 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(
       :body,
-      :picture
+      :picture,
+      :video,
+      :media_type
     )
   end
 

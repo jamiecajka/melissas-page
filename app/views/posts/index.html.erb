@@ -11,12 +11,18 @@
   <%  @posts.each do |p| %>
     <div class="card">
       <div class="card-image">
-        <div class="center_pic">
-          <br>
-          <figure class="image is-128x128">
-            <%= image_tag(p.picture.url) %>
-          </figure>
-        </div>
+        <br>
+        <% if p.media_type == 'picture' %>
+          <div class="center_pic">
+            <figure class="image">
+              <%= image_tag(p.picture.url) %>
+            </figure>
+          </div>
+        <% elsif p.media_type == 'video' %>
+          <div class="center_video">
+              <video controls width="640" height="480" src="<%= p.video %>"></video>
+          </div>
+        <% end %>
       </div>
       <br>
       <div class="card-content">
