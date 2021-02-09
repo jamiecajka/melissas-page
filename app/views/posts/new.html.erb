@@ -8,6 +8,14 @@
       <%= f.file_field :picture, class: 'text_field' %>
     </div>
     <div class="row">
+      <%= f.label :video, 'Video', class: 'form-actions' %>
+      <%= f.file_field :video, class: 'text_field' %>
+    </div>
+    <div class="row">
+      <%= f.label :media_type, 'Media Type', class: 'form-actions' %>
+      <%= f.select :media_type, options_for_select([['Text Only', 'none'], ['Video', 'video'], ['Picture', 'picture']]) %>
+    </div>
+    <div class="row">
       <%= f.label :body, 'Body', class: 'form-actions' %>
       <%= f.text_area :body, class: 'text_area' %>
     </div>

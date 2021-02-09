@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
 
-$scheme-main:#F7F7F7;
-$navbar-item-color:#363A3E;
+$scheme-main:#363A3E;
+$navbar-item-color:#F2C9CB;
 $family-secondary: 'Satisfy', cursive;
-$warning: #C7D4C7;
+$warning: #363A3E;
 $body-family:'Raleway', sans-serif;
+$card-background-color: #363A3E;
+$card-shadow: 0 0.5em 1em -0.125em #363A3E, 0 0px 0 1px #363A3E;
+$white: #F7F7F7;
 
 .navbar-item.center {
     flex-grow: 1;

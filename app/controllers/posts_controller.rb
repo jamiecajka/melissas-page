@@ -37,7 +37,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.destroy
       flash[:notice] = 'Post has been deleted.'
-      redirect_to user_path(posts_path)
+      redirect_to posts_path
     end
   end
 
@@ -46,7 +46,9 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(
       :body,
-      :picture
+      :picture,
+      :video,
+      :media_type
     )
   end
 
