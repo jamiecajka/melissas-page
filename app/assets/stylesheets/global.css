@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Satisfy&display=swap');
 
 body {
-  background: #F7F7F7
+  background:  /* #363A3E #F7F7F7 #F2ECED */ #FBFEFF
 }
 
 /* Home Page */
@@ -20,6 +20,14 @@ body {
   border-radius: 5px;
 }
 
+.spacer1 {
+  width: 25px;
+}
+
+.spacer2 {
+  width: 125px;
+}
+
 .header_links {
   text-decoration: none;
   color: #363A3E;
@@ -35,14 +43,14 @@ body {
   margin-right: auto;
   width: 45%;
   border-radius: 25%;
-  border: 1px solid #E5E5E5;
+  border: 1px solid #F2C9CB;
 }
 
 /* Multi-Page */
 
 .page_header {
   text-align: center;
-  color: #3E434E;
+  margin: 5px 0px;
   font-family: 'Satisfy', cursive;
   font-size: 25px;
 }
@@ -87,6 +95,7 @@ body {
   border-radius: 25%;
   height: 300px;
   margin-left: 40%;
+  margin-top: 10px;
 }
 
 /* Blog Page */

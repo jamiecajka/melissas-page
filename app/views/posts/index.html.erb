@@ -1,5 +1,7 @@
 <div class="page_header">
-  <h1>Melissa's Blog</h1>
+  <div class="title has-text-warning">
+    <h1>Melissa's Blog</h1>
+  </div>
 </div>
 
 <div class="container">
@@ -18,7 +20,7 @@
       </div>
       <br>
       <div class="card-content">
-        <div class="content">
+        <div class="subtitle has-text-white">
           <%= p.body %>
           <br>
           <time><%= p.created_at.strftime("%B %d, %Y") %></time>
