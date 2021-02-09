@@ -3,22 +3,24 @@
   <h1 class="title is-1 is-family-secondary">Meet Melissa</h1>
 </div>
 <br>
-<%  @contacts.each do |c| %>
-  <div class="card">
-    <div class="card-image">
-        <%= image_tag 'static-pictures/melissa.jpg', {class: 'picture'} %>
-    </div>
-    <div class="card-content">
-      <div class="content">
-        <h3> <%= simple_format  c.bio %></h3>
+<div class="container">
+  <%  @contacts.each do |c| %>
+    <div class="card">
+      <div class="card-image">
+          <%= image_tag 'static-pictures/melissa.jpg', {class: 'picture'} %>
       </div>
-      <% if user_signed_in? %>
-        <footer class="card-footer">
-          <%= link_to edit_contact_path(c.id) do %>
-            <i class="far fa-edit fa-2x"></i>
-          <% end %>
-        </footer>
-      <% end %>
+      <div class="card-content">
+        <div class="subtitle has-text-white">
+          <h3> <%= simple_format  c.bio %></h3>
+        </div>
+        <% if user_signed_in? %>
+          <footer class="card-footer">
+            <%= link_to edit_contact_path(c.id) do %>
+              <i class="far fa-edit fa-2x"></i>
+            <% end %>
+          </footer>
+        <% end %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

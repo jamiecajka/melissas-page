@@ -14,24 +14,35 @@
 
   <body>
     <header>
-      <nav class="navbar has-background-warning" role="navigation" aria-label="main navigation">
-        <div class="navbar-item center">
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div id="navbarBasicExample" class="navbar-menu has-text-centered">
-          <div class="navbar-start is-size-4 is-family-secondary is-size-7-mobile">
-              <%= link_to "Home", new_user_path, :class=>"navbar-item" %>
-              <%= link_to "About", profiles_path, :class=>"navbar-item" %>
-              <%= link_to "Services", services_path, :class=>"navbar-item" %>
-              <%= link_to "Blog", posts_path, :class=>"navbar-item" %>
-              <%= link_to "Contact", contacts_path, :class=>"navbar-item" %>
+      <div class="nav_back">
+        <nav class="navbar has-background-warning" role="navigation" aria-label="main navigation">
+          <div class="spacer1">
+
           </div>
-        </div>
-      </nav>
+          <div class="navbar-brand center">
+           <a class="navbar-item is-size-3 is-family-secondary">
+              Blush Esthetics Studio
+           </a>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="spacer2">
+
+          </div>
+          <div id="navbarBasicExample" class="navbar-menu has-text-centered">
+            <div class="navbar-start center is-size-4 is-family-secondary is-size-7-mobile">
+                <%= link_to "Home", new_user_path, :class=>"navbar-item" %>
+                <%= link_to "About", profiles_path, :class=>"navbar-item" %>
+                <%= link_to "Services", services_path, :class=>"navbar-item" %>
+                <%= link_to "Blog", posts_path, :class=>"navbar-item" %>
+                <%= link_to "Contact", contacts_path, :class=>"navbar-item" %>
+            </div>
+          </div>
+        </nav>
+      </div>
     </header>
     <%= yield %>
     <footer>
